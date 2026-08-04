@@ -1,0 +1,345 @@
+/* PROFILE PAGE */
+.visi-misi {
+    max-width: 70%;
+    margin: 4rem auto;
+    padding: 4rem 2rem;
+    background-color: var(--surface);
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.visi-misi-title {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--on_surface);
+    background-color: transparent;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.visi-misi-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--on_surface);
+    background-color: transparent;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.visi-misi-visi {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: var(--on_surface_variant);
+    background-color: transparent;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.nested-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    background-color: transparent;
+    margin: 0.8rem 0 0.4rem;
+}
+
+.misi-list, .tujuan-list, .sasaran-list {
+    list-style: none;
+    padding-left: 0;
+    background-color: transparent;
+}
+
+.misi-item {
+    margin-bottom: 0.6rem;
+}
+
+.tujuan-item {
+    margin-top: 0.4rem;
+    background-color: transparent;
+}
+
+.misi-item-title, .tujuan-item-title {
+    display: block;
+    width: 100%;
+    text-align: left;
+    color: var(--on_primary_container);
+    border: none;
+    border-radius: 999px;
+    padding: 1rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-radius 0.3s ease, color 0.3s ease;
+}
+
+.misi-item-title {
+    text-align: center;
+    background: var(--surface_dim);
+}
+
+
+.tujuan-item-title {
+    text-align: left;
+    background: var(--surface);
+}
+
+.misi-item-title:hover, .tujuan-item-title:hover {
+    color: var(--primary);
+}
+
+.misi-item-title.open, .tujuan-item-title.open {
+    border-radius: 50px 50px 0 0;
+}
+
+.tujuan-wrapper, .sasaran-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 1rem 0 1.3rem;
+    border-radius: 45px 45px 45px 45px;
+    transition: border-radius 0.3s ease, max-height 0.4s ease;
+}
+
+.tujuan-wrapper {
+    background-color: var(--surface_dim);
+}
+
+.sasaran-wrapper {
+        background-color: var(--surface);
+}
+
+.tujuan-wrapper.open, .sasaran-wrapper.open {
+    max-height: 600px;
+    border-radius: 0 0 45px 45px;
+}
+
+.tujuan-list li {
+    padding-bottom: 0.5rem;
+}
+
+.tujuan-list li:last-child {
+    margin-bottom: 1rem;
+}
+
+.sasaran-list {
+    list-style: disc;
+    padding-left: 1.2rem;
+    background-color: transparent;
+}
+
+.sasaran-list li {
+    padding: 0.3rem 0;
+    color: var(--on_surface_variant);
+    background-color: transparent;
+}
+
+.sejarah {
+    background-color: var(--primary);
+    padding: 4rem 2rem;
+}
+
+.sejarah-wrapper {
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.sejarah-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--on_primary);
+    background-color: var(--primary);
+    margin-bottom: 1.2rem;
+}
+
+.sejarah-teks {
+    font-size: 1rem;
+    line-height: 1.7;
+    background-color: var(--primary);
+    color: var(--on_primary);
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: pre-line;
+}
+
+.sejarah-teks.expanded {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
+
+.sejarah-toggle {
+    display: block;
+    margin-left: auto;
+    margin-top: 0.8rem;
+    border: none;
+    color: var(--on_primary);
+    background-color: var(--primary);
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.org-chart-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    overflow-x: auto;
+    background-color: var(--primary);
+}
+
+.org-chart-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--on_primary);
+    background-color: transparent;
+    margin-bottom: 2.5rem;
+}
+
+.org-tree, #org-chart {
+    background-color: var(--secondary_container);
+    border-radius: 24px;
+    padding: 2rem 0;
+}
+
+.org-tree, .org-tree ul {
+    list-style: none;
+    padding-top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.org-tree li {
+    position: relative;
+    padding: 20px 10px 0 10px;
+    background-color: transparent;
+}
+
+.org-tree li::before, .org-tree li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 50%;
+    height: 20px;
+    border-top: 1px solid var(--outline);
+}
+
+.org-tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 1px solid var(--outline);
+}
+
+.org-tree li:only-child::before,
+.org-tree li:only-child::after {
+    display: none;
+}
+
+.org-tree li:first-child::before,
+.org-tree li:last-child::after {
+    border: none;
+}
+
+.org-tree li:last-child::before {
+    border-right: 1px solid var(--outline);
+}
+
+.org-tree li:first-child::after {
+    border-left: 1px solid var(--outline);
+}
+
+.org-tree ul {
+    background-color: transparent;
+}
+
+.org-tree ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid var(--outline);
+    width: 0;
+    height: 20px;
+}
+
+.org-card {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--on_primary);
+    border-radius: 16px;
+    padding: 0.8rem 1.2rem;
+    text-align: left;
+    min-width: 200px;
+}
+
+.org-tree > li > .org-card {
+    flex-direction: column;
+    text-align: center;
+    min-width: 16rem;
+    padding: 1.5rem;
+}
+
+.org-card-foto {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.org-tree > li > .org-card .org-card-foto {
+    width: 5rem;
+    height: 5rem;
+}
+
+.org-card-jabatan {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--on_secondary_container);
+}
+
+.org-card-nama {
+    font-size: 0.8rem;
+    color: var(--on_secondary_container);
+}
+
+@media (max-width: 768px) {
+    .org-tree, #org-chart {
+        padding: 1rem;
+    }
+
+    .org-tree, .org-tree ul {
+        display: block;
+        padding-top: 0;
+        padding-left: 1.5rem;
+    }
+
+    .org-tree li {
+        padding: 0.6rem 0 0 0;
+    }
+    
+    .org-tree li::before,
+    .org-tree li::after,
+    .org-tree ul::before {
+        display: none;
+    }
+    
+    .org-card {
+        text-align: left;
+    }
+
+    .org-tree > li > .org-card {
+        flex-direction: row;
+        text-align: left;
+        min-width: 0;
+        padding: 0.8rem 1.2rem;
+    }
+
+    .org-tree > li > .org-card .org-card-foto {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}

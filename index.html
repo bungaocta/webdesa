@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Makasari</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <header class="header-nav">
+        <a href="index.html">
+            <img src="/assets/logo.png" class="logo" alt="Logo desa" >
+        </a>
+
+        <button class="hamburger" id="hamburger" aria-label="Buka menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="nav-menu">
+            <a class="active" href="index.html">Home</a>
+            <a href="profile.html">Profil Desa</a>
+            <a href="info.html">Infografis</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-slider" id="hero-slider"></div>
+        </section>
+
+        <section class="jelajah">
+            <div class="jelajah-content">
+                <h2 class="jelajah-title">JELAJAHI DESA</h2>
+                <p class="jelajah-text">
+                    Mulai penjelajahan Anda untuk melihat bagaimana wilayah kami tumbuh dan berkembang. 
+                    Temukan kisah latar belakang dan aparatur pemerintahan kami pada menu profil, 
+                    atau telusuri angka-angka penting seputar demografi dan anggaran secara visual
+                    lewat menu infografis berikut.
+                </p>
+            </div>
+
+            <div class="jelajah-actions">
+                <a href="profile.html" class="btn btn-primary">Profil Desa</a>
+                <a href="info.html" class="btn btn-outline">Infografis Desa</a>
+            </div>
+        </section>
+
+        <section class="sambutan">
+            <div class="sambutan-card">
+                <img src="assets/Gufron_Al_Bantani.jpg" alt="Foto Kepala Desa" class="sambutan-foto">
+                
+                <div class="sambutan-content">
+                    <h2 class="sambutan-title">Sambutan Kepala Desa</h2>
+                    <p class="sambutan-nama">Mama Ghufron</p>
+                    <p class="sambutan-text">
+                        Selamat datang di website resmi desa kami, wadah komunikasi digital yang hadir demi mewujudkan keterbukaan informasi bagi seluruh masyarakat. 
+                        Melalui platform ini, kami berkomitmen menyajikan data kependudukan yang transparan, profil wilayah, serta capaian program pembangunan secara akurat. 
+                        Kami berharap ruang digital ini dapat mempererat silaturahmi sekaligus memudahkan warga dalam mengakses layanan administrasi pemerintahan secara efektif. 
+                        Mari bersama-sama kita manfaatkan teknologi ini untuk berkolaborasi membangun desa yang lebih maju, mandiri, dan sejahtera.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="peta">
+            <h2 class="peta-title">Peta Desa</h2>
+            <div class="peta-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42673.88652113873!2d106.6599233435254!3d-6.827072904364715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e682d1b3801b11b%3A0xae6b19406c92af21!2sMakasari%2C%20Kalapanunggal%2C%20Sukabumi%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1785693336938!5m2!1sen!2sid" 
+                    allowfullscreen
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <section class="statistik">
+            <h2 class="statistik-title">Administrasi Penduduk</h2>
+            <div class="statistik-grid" id="statistik-grid"></div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <img src="assets/logo.png" alt="Logo Des" class="footer-logo">
+                <div class="footer-desa">
+                    <h3 class="footer-heading">Desa Makasari</h3>
+                    <p class="footer-alamat">
+                        Kecamatan Kalapanunggal<br>
+                        Kabupaten Sukabumi<br>
+                        Provinsi Jawa Barat<br>
+                        Kode Pos 43354
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3 class="footer-heading">Contact Person</h3>
+                <ul class="footer-contacts" id="footer-contacts"></ul>
+                <p class="footer-email" id="footer-email"></p>
+            </div>
+        </footer>
+    </main>
+    <script src="js/global.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

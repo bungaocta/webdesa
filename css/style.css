@@ -1,0 +1,254 @@
+@import "colors.css";
+
+@font-face {
+    font-family: "roboto";
+    src: url("/assets/fonts/Roboto-Regular.woff2"); format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("/assets/fonts/Roboto-Medium.woff2"); format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("/assets/fonts/Roboto-Bold.woff2"); format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--surface);
+}
+
+body {
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+}
+
+.logo {
+    height: 3.5rem;
+    width: auto;
+    background-color: transparent;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    background-color: var(--on_primary);
+}
+
+.header-nav a {
+    background-color: transparent;
+}
+
+.header-nav.scrolled {
+    background-color: var(--primary);
+}
+
+.header-nav nav{
+    background-color: transparent;
+    display: flex;
+    gap: 2rem;
+}
+
+.header-nav nav a {
+    background-color: transparent;
+    color: var(--on_surface_variant);
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.header-nav.scrolled nav a {
+    color: var(--outline_variant);
+}
+
+.header-nav nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.header-nav nav a:hover::after {
+    width: 100%;
+}
+
+.header-nav nav a.active {
+    color: var(--primary);
+}
+
+.header-nav.header-nav.scrolled nav a.active {
+    color: var(--on_primary);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--primary);
+}
+
+.header-nav.scrolled .hamburger {
+    color: var(--on_primary);
+}
+
+.hamburger span {
+    width: 24px;
+    height: 2px;
+    background-color: currentColor;
+}
+.footer {
+    background-color: var(--surface_container);
+    padding: 3rem 3rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 420px;
+    background-color: transparent;
+}
+
+.footer-logo {
+    height: 7rem;
+    width: auto;
+    flex-shrink: 0;
+    background-color: transparent;
+}
+
+.footer-desa {
+    background-color: transparent;
+}
+
+.footer-heading {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--on_surface);
+    margin-bottom: 0.5rem;
+    background-color: transparent;
+}
+
+.footer-alamat {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--on_surface_variant);
+    background-color: transparent;
+}
+
+.footer-right {
+    min-width: 220px;
+    background-color: transparent;
+}
+
+.footer-contacts {
+    background-color: transparent;
+}
+
+.footer-contacts li {
+    font-size: 0.9rem;
+    color: var(--on_surface_variant);
+    background-color: transparent;
+    margin-bottom: 0.5rem;
+    list-style-type: none;
+}
+
+.footer-contacts li strong {
+    color: var(--on_surface);
+    font-weight: 600;
+    background-color: transparent;
+}
+
+.footer-email {
+    font-size: 0.9rem;
+    color: var(--primary);
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .header-nav nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        background-color: var(--on_primary);
+    }
+
+    .header-nav.scrolled nav {
+        background-color: var(--primary);
+    }
+    
+    .header-nav nav.open {
+        display: flex;
+    }
+
+    .header-nav nav a {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        color: var(--primary);
+        border: 1px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+
+    .header-nav.scrolled nav a {
+        color: var(--on_primary);
+    }
+
+    .header-nav nav a::after {
+        content: none;
+    }
+
+    .header-nav a:hover, .header-nav a:active {
+        border-color: currentColor;
+    }
+    
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left {
+        flex-direction: column;
+    }
+}

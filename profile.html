@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Desa Makasari</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profil.css">
+</head>
+<body>
+    <header class="header-nav">
+        <a href="index.html">
+            <img src="/assets/logo.png" class="logo" alt="Logo desa" >
+        </a>
+
+        <button class="hamburger" id="hamburger" aria-label="Buka menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a class="active" href="profile.html">Profil Desa</a>
+            <a href="info.html">Infografis</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sejarah">
+            <div class="sejarah-wrapper">
+                <h2 class="sejarah-title" id="sejarah-title"></h2>
+                <p class="sejarah-teks" id="sejarah-teks"></p>
+                <button class="sejarah-toggle" id="sejarah-toggle" hidden>Baca Selengkapnya</button>
+            </div>
+        </section>
+
+        <section class="visi-misi">
+            <h1 class="visi-misi-title">Visi Misi Desa</h1>
+            <div class="visi">
+                <h2 class="visi-misi-subtitle">Visi</h2>
+                <p class="visi-misi-visi" id="visi-text"></p>
+            </div>
+
+
+            <h2 class="visi-misi-subtitle">Misi</h2>
+            <ul class="misi-list" id="misi-list"></ul>
+        </section>
+
+        <section class="org-chart-section">
+            <h2 class="org-chart-title">Struktur Organisasi</h2>
+            <div id="org-chart"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="assets/logo.png" alt="Logo Des" class="footer-logo">
+            <div class="footer-desa">
+                <h3 class="footer-heading">Desa Makasari</h3>
+                <p class="footer-alamat">
+                    Kecamatan Kalapanunggal<br>
+                    Kabupaten Sukabumi<br>
+                    Provinsi Jawa Barat<br>
+                    Kode Pos 43354
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <h3 class="footer-heading">Contact Person</h3>
+            <ul class="footer-contacts" id="footer-contacts"></ul>
+            <p class="footer-email" id="footer-email"></p>
+        </div>
+    </footer>
+
+    <script src="/js/global.js"></script>
+    <script src="/js/profil.js"></script>
+</body>
+</html>
